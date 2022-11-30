@@ -25,7 +25,7 @@ function onDOMContentLoaded(e) {
 	// console.log(parsedForm);
 	if (parsedForm===null) {
 		input.value = "";
-   text.textContent = ""
+   text.textContent = "";
 	} else{
 	input.value = parsedForm.email;
       text.textContent = parsedForm.message;};
@@ -35,6 +35,8 @@ function onDOMContentLoaded(e) {
 form.addEventListener("submit", onSubmitForm);
 
 function onSubmitForm(e) {
+	e.preventDefault();
+	console.log(contact);
 	localStorage.clear();
-	console.log(localStorage.getItem("feedback-form-state"));
+	
 }
