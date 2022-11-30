@@ -25,10 +25,10 @@ function onDOMContentLoaded(e) {
 	// console.log(parsedForm);
 	if (parsedForm===null) {
 		input.value = "";
-   text.textContent = "";
+   text.value = "";
 	} else{
 	input.value = parsedForm.email;
-      text.textContent = parsedForm.message;};
+      text.value = parsedForm.message;};
 	
 }
 
@@ -38,5 +38,7 @@ function onSubmitForm(e) {
 	e.preventDefault();
 	console.log(contact);
 	localStorage.clear();
-	
+	input.value = "";
+	text.value = "";
+	// console.log(input.value);
 }
